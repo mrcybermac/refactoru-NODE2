@@ -46,6 +46,7 @@ app.get('/why', function (req, res){
 app.get('/form', function (req, res){
     fs.readFile("index.html", function (err, fileData){
         console.log(fileData);
+        res.setHeader("Content-Type", "text/html");
         res.send(fileData);
     });
 });
